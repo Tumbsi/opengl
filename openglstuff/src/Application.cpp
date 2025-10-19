@@ -10,17 +10,17 @@ int main(void)
 
     //rubiks cube test
     RubiksCube cube;
-    cube.print();
 
-    std::cout << "\nRotating Front face clockwise...\n";
-    cube.rotateFace(F, true);
-    cube.rotateFrontEdgesClockWise();
-    cube.print();
+    std::cout << "Solved? " << (cube.isSolved() ? "Yes" : "No") << "\n";
 
-    std::cout << "\nFront counterclockwise...\n";
-    cube.rotateFrontEdgesCounterClockWise();
-    cube.print();
-    std::cout << "Cube logic test done.\n\n";
+    cube.randomize(20);
+
+    std::cout << "After randomization, solved? " << (cube.isSolved() ? "Yes" : "No") << "\n";
+
+
+    std::cout << "\nCube test done\n";
+    
+   
 
     ///////
 

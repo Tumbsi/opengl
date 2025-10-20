@@ -345,3 +345,23 @@ void RubiksCube::solveUpCross() {
     // Repeat for other edges
 }
 
+
+cubie::cube RubiksCube::toCubieCube() const {
+    cubie::cube c;
+    // --- CORNERS ---
+// 0..7 = corner positions
+// each corner: figure out which piece is at that position and its orientation
+// example mapping (pseudo):
+// c.cp[0] = piece index; c.co[0] = orientation
+// (you’ll need to map all 8 corners correctly based on your stickers[54])
+
+
+
+// --- EDGES ---
+// 0..11 = edge positions
+// each edge: figure out which piece is at that position and its flip
+// example mapping (pseudo):
+// c.ep[0] = piece index; c.eo[0] = flip
+
+    return c;
+}

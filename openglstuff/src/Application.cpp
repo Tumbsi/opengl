@@ -1,25 +1,26 @@
 #include <GL/glew.h> /*include this before openglthings!*/
 #include <GLFW/glfw3.h>
-
+#include "solve.h"
+#include "move.h"
+#include "solve.h"
 #include <iostream>
-
+#include "cubie.h"
 #include "RubiksCube.h"
+#include "../../TwoPhaseSolver/cubie.h"
 
 int main(void)
 {
 
     //rubiks cube test
     RubiksCube cube;
-
-    std::cout << "Solved? " << (cube.isSolved() ? "Yes" : "No") << "\n";
-
+    cubie::test_compile();
     cube.randomize(20);
+    cube.isSolved();
+    cube.print();
 
-    std::cout << "After randomization, solved? " << (cube.isSolved() ? "Yes" : "No") << "\n";
-
+   
 
     std::cout << "\nCube test done\n";
-    
    
 
     ///////
